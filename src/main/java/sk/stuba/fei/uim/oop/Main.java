@@ -1,11 +1,20 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.kontakty.Kontakt;
+
 public class Main {
     public static void main(String[] args) {
-        Test test=new Test();
-        test.jeden=1;
-        test.dva=2;
-        test.tri=3;
-        //viem pristupovat aj k protected veciam
+        var peter=new Kontakt("Peter","Klemovic");
+        var viliam=new Kontakt("Viliam Rideky");
+        var kase=new Kontakt("Case", "Miro");
+
+        var prednasajuci=new Kontakt("Gabriel","Juhas");
+
+        var kontakty=new Kontakt[]{new Kontakt(peter),new Kontakt(viliam),new Kontakt(kase)};
+        prednasajuci.pridajZnamych(kontakty);
+
+        prednasajuci.vypisZnamych();
+        peter.setMeno("Karim");
+        prednasajuci.vypisZnamych();
     }
 }
