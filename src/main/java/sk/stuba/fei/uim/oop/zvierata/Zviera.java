@@ -5,6 +5,10 @@ public abstract class Zviera implements Behanie{
 
     public abstract void zvukZvierata();
 
+    public Zviera(String meno) {
+        this.meno = meno;
+    }
+
     public void pohladkat(){
         System.out.println(this.meno + " bol pohladkany");
         this.zvukZvierata();
