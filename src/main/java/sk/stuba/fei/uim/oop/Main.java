@@ -1,16 +1,16 @@
 package sk.stuba.fei.uim.oop;
 
-import sk.stuba.fei.uim.oop.kontakty.Absolvent;
-import sk.stuba.fei.uim.oop.kontakty.Kontakt;
+import sk.stuba.fei.uim.oop.zvierata.Macka;
+import sk.stuba.fei.uim.oop.zvierata.Pes;
 
 public class Main {
     public static void main(String[] args) {
-        var student=new Kontakt("Karim","Belak");
-        var absolvent=new Absolvent("Ing.","Janko","Hrasko");
+        //nemozeme spravit napriklad var zviera=new Zviera(); pretoze to je abstraktna trieda
+        var dunco=new Pes("Dunco");
+        var garfield=new Macka("Garfield");
 
-
-        System.out.println(student.toString());
-        System.out.println(absolvent.toString());
+        dunco.pohladkat();
+        garfield.pohladkat();
 
     }
 }
