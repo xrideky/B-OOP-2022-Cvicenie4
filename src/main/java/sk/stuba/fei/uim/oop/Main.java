@@ -1,20 +1,16 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.kontakty.Absolvent;
 import sk.stuba.fei.uim.oop.kontakty.Kontakt;
 
 public class Main {
     public static void main(String[] args) {
-        var peter=new Kontakt("Peter","Klemovic");
-        var viliam=new Kontakt("Viliam Rideky");
-        var kase=new Kontakt("Case", "Miro");
+        var student=new Kontakt("Karim","Belak");
+        var absolvent=new Absolvent("Ing.","Janko","Hrasko");
 
-        var prednasajuci=new Kontakt("Gabriel","Juhas");
 
-        var kontakty=new Kontakt[]{new Kontakt(peter),new Kontakt(viliam),new Kontakt(kase)};
-        prednasajuci.pridajZnamych(kontakty);
+        System.out.println(student.toString());
+        System.out.println(absolvent.toString());
 
-        prednasajuci.vypisZnamych();
-        peter.setMeno("Karim");
-        prednasajuci.vypisZnamych();
     }
 }
